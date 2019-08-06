@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0dd4cd8e-bcf6-404a-b1d6-d5bb94f56b46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/historypasschange/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/signup/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/signup/add.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/signup/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/signup/find.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/user/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/user/add.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/user/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/user/edit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/user/find.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/usertoken/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/usertoken/add.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/usertoken/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/repositories/usertoken/find.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/services/users/signup/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/services/users/signup/check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/services/users/signup/composemail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tekoapp/services/users/signup/token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tekoapp/api/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/tekoapp/api/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tekoapp/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tekoapp/repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tekoapp/repositories/signup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tekoapp/repositories/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tekoapp/repositories/usertoken.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tekoapp/services/users/signup.py" beforeDir="false" afterPath="$PROJECT_DIR$/tekoapp/services/users/signup.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tekoapp@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tekoapp@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tekoapp@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tekoapp: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="70" column="17" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="70" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cli</find>
+      <find>ROOT_DIR</find>
+      <find>FLASK_APP_MAIL_ADDRESS</find>
+      <find>helper</find>
+    </findStrings>
+    <dirStrings>
+      <dir>D:\Project\back-end\tekoapp\tekoapp</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tekoapp/services/admin/deleteuser.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/admin/lookaccount.py" />
+        <option value="$PROJECT_DIR$/tekoapp/helpers/validator.py" />
+        <option value="$PROJECT_DIR$/tekoapp/helpers/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/helpers/randompassword.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/google/login.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/resetpassword.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/user/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/user/edit.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/user/delete.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/user/find.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/user.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/user/add.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/signup/find.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/signup/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/signup/delete.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/signup.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/usertoken/add.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/usertoken/find.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/usertoken/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/usertoken/delete.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/usertoken.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/resetpassword.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/changepassword.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/check/existaccount.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/check/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/check/rule.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/add/user.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/add/signuprequest.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/add/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/add/table.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/insert/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositoriesaction/signup/insert/totable.py" />
+        <option value="$PROJECT_DIR$/tekoapp/repositories/signup/add.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/insert/totable.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/delete/attable.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/delete/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/insert/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/check/rule.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/check/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/sendmail/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/sendmail/compose.py" />
+        <option value="$PROJECT_DIR$/tekoapp/api/users.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/token/__init__.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/token.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/signuprequest.py" />
+        <option value="$PROJECT_DIR$/tekoapp/services/users/signup/__init__.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="684" />
+    <option name="width" value="698" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+              <item name="tekoapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+              <item name="tekoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+              <item name="tekoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+              <item name="tekoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+              <item name="tekoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end" type="462c0819:PsiDirectoryNode" />
+              <item name="tekoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="signup" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TEKO\project-nguyen-duy-chien\clean-code\back-end\tekoapp\services\users\signup" />
+      <recent name="$PROJECT_DIR$/tekoapp/helpers" />
+      <recent name="$PROJECT_DIR$/tekoapp/services/share" />
+      <recent name="D:\TEKO\project-nguyen-duy-chien\clean-code\back-end\tekoapp\services\users" />
+      <recent name="$PROJECT_DIR$/tekoapp/repositories" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for test_auth.UserApiTestCase">
+    <configuration name="Flask" type="Python.FlaskServer" nameIsGenerated="true">
+      <option name="flaskDebug" value="true" />
+      <module name="back-end" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\Project\back-end\tekoapp\env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for APITestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tekoapp/tests/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;APITestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_auth.UserApiTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tekoapp/tests/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auth.UserApiTestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.Flask" />
+      <item itemvalue="Python tests.Unittests for APITestCase" />
+      <item itemvalue="Python tests.Unittests for test_auth.UserApiTestCase" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for test_auth.UserApiTestCase" />
+        <item itemvalue="Python tests.Unittests for APITestCase" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dd4cd8e-bcf6-404a-b1d6-d5bb94f56b46" name="Default Changelist" comment="" />
+      <created>1562753820906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562753820906</updated>
+      <workItem from="1562753831045" duration="414000" />
+      <workItem from="1563155653719" duration="2380000" />
+      <workItem from="1563161986523" duration="2524000" />
+      <workItem from="1563164530687" duration="8000" />
+      <workItem from="1563164568458" duration="20000" />
+      <workItem from="1563165028692" duration="1540000" />
+      <workItem from="1563166967442" duration="156000" />
+      <workItem from="1563188002845" duration="2297000" />
+      <workItem from="1563199625219" duration="11543000" />
+      <workItem from="1563246710591" duration="551000" />
+      <workItem from="1563247279088" duration="43000" />
+      <workItem from="1563247358427" duration="23362000" />
+      <workItem from="1563284670155" duration="9758000" />
+      <workItem from="1563295373511" duration="760000" />
+      <workItem from="1563328260636" duration="10000" />
+      <workItem from="1563328323451" duration="1053000" />
+      <workItem from="1563416849070" duration="21000" />
+      <workItem from="1563432460143" duration="3161000" />
+      <workItem from="1564019562605" duration="27523000" />
+      <workItem from="1564063335722" duration="9203000" />
+      <workItem from="1564105328402" duration="3255000" />
+      <workItem from="1564123994946" duration="1414000" />
+      <workItem from="1564207512269" duration="5069000" />
+      <workItem from="1564242114924" duration="4437000" />
+      <workItem from="1564292810431" duration="2104000" />
+      <workItem from="1564364258584" duration="9000" />
+      <workItem from="1564364279571" duration="10849000" />
+      <workItem from="1564375487791" duration="666000" />
+      <workItem from="1564394083072" duration="842000" />
+      <workItem from="1564395247595" duration="770000" />
+      <workItem from="1564396127411" duration="659000" />
+      <workItem from="1564406361297" duration="4694000" />
+      <workItem from="1564450861891" duration="12000" />
+      <workItem from="1564450891277" duration="8352000" />
+      <workItem from="1564496648493" duration="6387000" />
+      <workItem from="1564577330315" duration="7093000" />
+      <workItem from="1564624139788" duration="16069000" />
+      <workItem from="1564727456447" duration="6799000" />
+      <workItem from="1564820558602" duration="1803000" />
+      <workItem from="1564888859448" duration="4537000" />
+      <workItem from="1564898220154" duration="4935000" />
+      <workItem from="1564904625509" duration="3310000" />
+      <workItem from="1564908516977" duration="1399000" />
+      <workItem from="1564913750800" duration="1825000" />
+      <workItem from="1564927087496" duration="12004000" />
+      <workItem from="1564969403988" duration="5470000" />
+      <workItem from="1565005613686" duration="605000" />
+      <workItem from="1565006572808" duration="17240000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_auth_UserApiTestCase - 2019.07.15 at 09h 13m 25s.xml">
+      <configuration name="Unittests for test_auth.UserApiTestCase" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="228935000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.22258593" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32829374" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32982844" />
+      <window_info anchor="right" id="Database" order="4" weight="0.18910742" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.049099836" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32829374" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32982844" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.18910742" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tekoapp$Unittests_for_test_auth_UserApiTestCase.coverage" NAME="Unittests for test_auth.UserApiTestCase Coverage Results" MODIFIED="1563156804476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tekoapp/tests/api" />
+    <SUITE FILE_PATH="coverage/tekoapp$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1563156651232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tekoapp/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/user/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/user/find.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/user/delete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/user/add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/user/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/signup/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/signup/delete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/usertoken/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/usertoken/find.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/usertoken/add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/models/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/checkhistorypass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/resetpassword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/resetpassword.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/changepassword.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/historypasschange/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/usertoken.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/signup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/usertoken/delete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/helpers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/signup/find.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup/check/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup/add/user.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/models/signup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup/insert/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup/insert/totable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositoriesaction/signup/check/rule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/repositories/signup/add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/insert/totable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/delete/attable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/delete/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/insert/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/check/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/sendmail/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://46977c2b-c68d-4405-81a1-9026505b5aac/schema/tekoapp/table/signup_request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="aecca51a-0827-4e47-a437-13a12e3f93e5">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/api/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/token/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/composemail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/token.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/signuprequest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="70" column="17" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="70" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekoapp/services/users/signup/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
