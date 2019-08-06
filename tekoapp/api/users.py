@@ -22,7 +22,6 @@ _login_req = ns.model(
 _changepassword_req = ns.model(
     'changepassword_req', 
     {
-        'token' : fields.String(required=True, description='user email'),
         'password' : fields.String(required=True, description='your password'),
         'newpassword' : fields.String(required=True, description='new password')
     }
@@ -60,20 +59,29 @@ class Register(Resource):
         data = request.json or request.args
         return services.users.signup.make_response(**data)
 
-# @ns.route('/register/verify/<string:token>')
-# class Verify(Resource):
-#     @ns.marshal_with(_verify_res)
-#     def get(self, token):
-#         message = services.users.signup.verify(token)
-#         return message
-#
-# @ns.route('/login/')
-# class Login(Resource):
-#     @ns.expect(_login_req, validate=True)
-#     def post(self):
-#         data = request.json or request.args
-#         return services.users.login.check_info_from_login_request(**data)
-#
+@ns.route('/register/verify/<string:token>')
+class Verify(Resource):
+    @ns.marshal_with(_verify_res)
+    def get(self, token):
+        print(token)
+        return services.users.signup.verify(token_string=token)
+
+@ns.route('/login/')
+class Login(Resource):
+    @ns.expect(_login_req, validate=True)
+    def post(self):
+        data = request.json or request.args
+        return services.users.login.make_response(**data)
+
+@ns.route('/maintainLogin/')
+class MaintainLogin(Resource):
+    @ns.expect(parser_token)
+    def get(self):
+        token_string = request.headers.get('Authorization')
+        return services.users.login.check.maintain(
+            token_string=token_string
+        )
+
 # @ns.route('/google/login')
 # class Login(Resource):
 #     @ns.expect(parser_token, _logingoogle_req, validate=True)
@@ -81,32 +89,31 @@ class Register(Resource):
 #         token = request.headers.get('Authorization')
 #         data = request.json or request.args
 #         return services.google.login.make_response(token=token, email=data['email'])
-#
-# @ns.route('/logout/')
-# class Logout(Resource):
-#     @ns.expect(parser_token)
-#     def get(self):
-#         token = request.headers.get('Authorization')
-#         return services.users.logout.check_token_from_logout_request(token)
-#
-# @ns.route('/changePassword/')
-# class Changepassword(Resource):
-#     @ns.expect(_changepassword_req, validate=True)
-#     def post(self):
-#         data = request.json or request.args
-#         return services.users.changepassword.check_info_and_res(**data)
-#
-# @ns.route('/resetPassword/')
-# class Resetpassword(Resource):
-#     @ns.expect(_resetpass_req, validate=True)
-#     def post(self):
-#         data = request.json or request.args
-#         user = services.users.resetpassword.check_info_form_resetpassword_and_res(**data)
-#         return user
-#
-# @ns.route('/maintainLogin/')
-# class MaintainLogin(Resource):
-#     @ns.expect(parser_token)
-#     def get(self):
-#         token = request.headers.get('Authorization')
-#         return services.users.login.check_maintain_login(token)
+
+
+@ns.route('/logout/')
+class Logout(Resource):
+    @ns.expect(parser_token)
+    def get(self):
+        token = request.headers.get('Authorization')
+        return services.users.logout.make_response(
+            tokenstring=token
+        )
+
+@ns.route('/changePassword/')
+class Changepassword(Resource):
+    @ns.expect(parser_token, _changepassword_req, validate=True)
+    def post(self):
+        access_token = request.headers.get('Authorization')
+        data = request.json or request.args
+        return services.users.changepassword.make_response(
+            tokenstring=access_token,
+            **data
+        )
+
+@ns.route('/resetPassword/')
+class Resetpassword(Resource):
+    @ns.expect(_resetpass_req, validate=True)
+    def post(self):
+        data = request.json or request.args
+        return services.users.resetpassword.make_response(**data)

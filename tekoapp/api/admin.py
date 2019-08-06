@@ -54,7 +54,9 @@ class Getlistuser(Resource):
     @ns.expect(parser_verify)
     def get(self):
         token = request.headers.get('Authorization')
-        return services.admin.getlistuser.get_list_user(token)
+        return services.admin.getlistuser.make_response(
+            token=token
+        )
 
 @ns.route('/isAdmin/')
 class VerifyAdmin(Resource):

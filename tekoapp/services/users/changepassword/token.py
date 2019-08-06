@@ -1,6 +1,7 @@
 import jwt, config
 from tekoapp import repositories as r
 from tekoapp.extensions import exceptions
+
 def decode(tokenstring):
     try:
         token_data = jwt.decode(tokenstring, config.FLASK_APP_SECRET_KEY)

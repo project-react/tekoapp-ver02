@@ -1,7 +1,12 @@
 from tekoapp import models
 from datetime import datetime
 
-def username_email_and_is_admin(new_username, new_email, new_is_admin, user):
+def username_email_and_is_admin(
+    new_username,
+    new_email,
+    new_is_admin,
+    user
+):
     user.username = new_username
     user.email = new_email
     user.is_admin = new_is_admin
@@ -19,6 +24,12 @@ def look_time(user, look_time):
 
 def is_active(user, is_active):
     user.is_active = is_active
+    models.db.session.add(user)
+    models.db.session.commit()
+    return user or None
+
+def password(user, newpassword):
+    user.password = newpassword
     models.db.session.add(user)
     models.db.session.commit()
     return user or None

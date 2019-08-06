@@ -31,6 +31,11 @@ def verify(token_string):
             password=signup_request.password_hash
         )
         if user:
+            r.historypasschange.add.by_userid_and_password(
+                userid=user.id,
+                password=user.password_hash,
+                is_real_pass=True
+            )
             return {
                 'message': 'success',
             }
