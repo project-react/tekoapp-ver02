@@ -31,8 +31,8 @@ def verify(token_string):
             password=signup_request.password_hash
         )
         if user:
-            r.historypasschange.add.by_userid_and_password(
-                userid=user.id,
+            r.historypasschange.add.by_user_id_and_password(
+                user_id=user.id,
                 password=user.password_hash,
                 is_real_pass=True
             )

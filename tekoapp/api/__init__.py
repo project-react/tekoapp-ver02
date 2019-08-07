@@ -12,6 +12,7 @@ api = Api(
     validate=False,
 )
 
+
 def init_app(app, **kwargs):
     """
     :param flask.Flask app: the app

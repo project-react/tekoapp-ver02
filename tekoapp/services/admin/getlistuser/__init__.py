@@ -1,7 +1,7 @@
-from tekoapp import repositories as r, helpers
+from tekoapp import repositories as r, helpers as h
 from tekoapp.extensions import exceptions
 
-@helpers.check_token_and_verify_admin
+@h.verify.admin.by_token
 def make_response(token):
     users = r.user.find.all()
     if users:

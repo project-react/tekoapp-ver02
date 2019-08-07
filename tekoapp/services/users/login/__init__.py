@@ -3,6 +3,7 @@ from tekoapp.extensions import exceptions as e
 from . import check
 from datetime import datetime
 
+
 @h.validator_before_handling
 def make_response(username, password):
     user = check.exist_account(

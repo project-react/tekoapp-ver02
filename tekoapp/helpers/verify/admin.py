@@ -1,13 +1,15 @@
-import jwt, config
+import jwt
+import config
 from tekoapp.extensions import exceptions
 from tekoapp import repositories as r
+
 
 def by_token(func):
     def inner(token):
         try:
             data = jwt.decode(token, config.FLASK_APP_SECRET_KEY)
             user = r.user.find.by_id(
-                user_id=data['userid']
+                user_id=data['user_id']
             )
             if user.is_admin:
                 return func(token)

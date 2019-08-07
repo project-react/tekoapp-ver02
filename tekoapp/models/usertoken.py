@@ -18,7 +18,6 @@ class User_Token(db.Model):
     created_at = db.Column(db.TIMESTAMP, default=datetime.now())
 
     def create_token(self):
-        print(self.expired_time)
         token_data = {
             "userid" : self.user_id,
             "exp" : datetime.timestamp(self.expired_time)

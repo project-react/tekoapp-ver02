@@ -13,7 +13,7 @@ def exist_account(username='', email=''):
 
 def historypassword(userid, newpassword):
     list_five_historypassword = r.historypasschange.find.five_recently(
-        userid=userid
+        user_id=userid
     )
     for historypass in list_five_historypassword:
         if historypass.check_password(newpassword):

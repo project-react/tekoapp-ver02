@@ -31,5 +31,11 @@ def by_email_or_username(email="", username=""):
     ).first()
     return user or None
 
+def list_orther_user(
+    userid
+):
+    return models.User.query\
+        .filter(models.User.id != userid).all()
+
 def all():
     return models.User.query.all()

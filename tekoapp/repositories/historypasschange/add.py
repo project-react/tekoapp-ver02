@@ -1,16 +1,18 @@
 from tekoapp import models as m
 
-def by_userid_and_password(
-    userid,
+
+def by_user_id_and_password(
+    user_id,
     password,
     is_real_pass
 ):
     data = {
-        'user_id': userid,
+        'user_id': user_id,
         'password': password,
         'is_real_pass': is_real_pass
     }
-    historypass = m.History_Pass_Change(**data)
-    m.db.session.add(historypass)
+    history_pass = m.HistoryPassChange(**data)
+    m.db.session.add(history_pass)
     m.db.session.commit()
-    return historypass
+    return history_pass
+

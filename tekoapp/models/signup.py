@@ -6,7 +6,7 @@ import jwt
 from flask_restplus import fields
 
 
-class Signup_Request(db.Model):
+class SignupRequest(db.Model):
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)
@@ -40,6 +40,7 @@ class Signup_Request(db.Model):
         token_string = jwt.encode(token_data, config.FLASK_APP_SECRET_KEY)
         self.user_token_confirm = token_string.decode('UTF-8')
 
+
 class SignupSchema:
     signup_request_req = {
         'email': fields.String(required=True, description='user email address'),
@@ -52,3 +53,4 @@ class SignupSchema:
         'username': fields.String(required=True, description='user username'),
         'expired_time': fields.String(required=True, description='expired time'),
     }
+

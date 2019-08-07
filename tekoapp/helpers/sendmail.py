@@ -3,6 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+
 def config_mail_verify(subject, content_msg, des_mail):
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject
@@ -11,6 +12,7 @@ def config_mail_verify(subject, content_msg, des_mail):
     msg.attach(MIMEText(content_msg, 'html'))
     print(des_mail)
     return msg
+
 
 def send_mail(subject, content_msg, des_mail, type=""):
     if(type != 'verify'): 

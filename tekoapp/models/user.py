@@ -1,10 +1,7 @@
-import enum
-import logging
 from flask_restplus import fields
-from datetime import datetime, timedelta
-
-
+from datetime import datetime
 from tekoapp.models import db, bcrypt
+
 
 class User(db.Model):
     def __init__(self, **kwargs):
@@ -49,6 +46,7 @@ class User(db.Model):
             'username': self.username,
             'email': self.email,
         }
+
 
 class UserSchema:
     user_create_req = {

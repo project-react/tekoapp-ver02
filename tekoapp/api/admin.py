@@ -1,6 +1,6 @@
 from flask_restplus import Namespace, Resource, fields
-from flask import request, jsonify
-from tekoapp import services, helpers
+from flask import request
+from tekoapp import services
 
 ns = Namespace('admin', description='function for Admin')
 
@@ -13,44 +13,43 @@ parser_verify.add_argument(
     required=True
 )
 
-_edituser_req = ns.model(
-    'edituser_req',
+_edit_user_req = ns.model(
+    'edit_user_req',
     {
-        'old_username': fields.String(required=True, description='old username'),
-        'new_username': fields.String(required=True, description='username'),
-        'new_email': fields.String(required=True, description='email'),
-        'is_admin': fields.Boolean(required=True, description='is admin', default=False)
+        'user_edited_id': fields.Integer(required=True),
+        'new_username': fields.String(required=True),
+        'new_email': fields.String(required=True),
+        'new_is_admin': fields.Boolean(required=True, default=False)
     }
 )
 
-_deleteuser_req = ns.model(
-    'deleteuser_req',
+_delete_user_req = ns.model(
+    'delete_user_req',
     {
-        'username': fields.String(required=True, description='username'),
-        'email': fields.String(required=True, description='email'),
+        'user_id': fields.Integer(required=True)
     }
 )
 
-_createuser_req = ns.model(
-    'createuser_req',
+_create_user_req = ns.model(
+    'create_user_req',
     {
-        'username': fields.String(required=True, description='username'),
-        'email': fields.String(required=True, description='email'),
-        'is_admin': fields.Boolean(required=True, description='is admin', default=False)
+        'username': fields.String(required=True),
+        'email': fields.String(required=True),
+        'is_admin': fields.Boolean(required=True, default=False)
     }
 )
 
-_lookaccount_req = ns.model(
-    'lookaccount_req',
+_look_account_req = ns.model(
+    'look_account_req',
     {
-        'username': fields.String(required=True, description='username'),
-        'email': fields.String(required=True, description='email'),
-        'look_time': fields.Integer(required=True, description='look_time')
+        'user_id': fields.Integer(required=True),
+        'look_time': fields.Integer(required=True)
     }
 )
 
-@ns.route('/getlistuser/')
-class Getlistuser(Resource):
+
+@ns.route('/get_list_user/')
+class GetListUser(Resource):
     @ns.expect(parser_verify)
     def get(self):
         token = request.headers.get('Authorization')
@@ -58,46 +57,54 @@ class Getlistuser(Resource):
             token=token
         )
 
-@ns.route('/isAdmin/')
+
+@ns.route('/is_admin/')
 class VerifyAdmin(Resource):
     @ns.expect(parser_verify)
     def get(self):
         token = request.headers.get('Authorization')
-        return services.admin.verifyadmin.verify_is_admin_by_token(token)
+        return services.admin.verifyadmin.make_response(
+            token=token
+        )
 
-@ns.route('/edituser/')
+
+@ns.route('/edit_user/')
 class EditUser(Resource):
-    @ns.expect(parser_verify, _edituser_req)
-    def put(token):
+    @ns.expect(parser_verify, _edit_user_req)
+    def put(self):
         token = request.headers.get('Authorization')
-        services.admin.verifyadmin.verify_is_admin_by_token(token)
+        services.admin.verifyadmin.make_response(token=token)
         data = request.json or request.args
-        return services.admin.edituser.edit_user(**data)
+        return services.admin.edituser.make_response(**data)
 
-@ns.route('/deleteuser/')
+
+@ns.route('/delete_user/')
 class DeleteUser(Resource):
-    @ns.expect(parser_verify, _deleteuser_req)
+    @ns.expect(parser_verify, _delete_user_req)
     def delete(self):
         token = request.headers.get('Authorization')
         data = request.json or request.args
-        return services.admin.deleteuser.delete_user_by_account_admin(token, **data)
+        return services.admin.deleteuser.make_response(token=token, **data)
 
-@ns.route('/createuser/')
+
+@ns.route('/create_user/')
 class CreateUser(Resource):
-    @ns.expect(parser_verify, _createuser_req)
+    @ns.expect(parser_verify, _create_user_req)
     def post(self):
         token = request.headers.get('Authorization')
-        services.admin.verifyadmin.verify_is_admin_by_token(token)
+        services.admin.verifyadmin.make_response(token=token)
         data = request.json or request.args
-        return services.admin.createuser.create_user_by_account_admin(**data)
+        return services.admin.createuser.make_response(**data)
 
-@ns.route('/lookaccount/')
+
+@ns.route('/look_account/')
 class LookAccount(Resource):
-    @ns.expect(parser_verify, _lookaccount_req)
+    @ns.expect(parser_verify, _look_account_req)
     def put(self):
         token = request.headers.get('Authorization')
         data = request.json or request.args
-        return services.admin.lookaccount.look_account_by_admin(
+        return services.admin.lookaccount.make_response(
             token=token,
             **data
         )
+

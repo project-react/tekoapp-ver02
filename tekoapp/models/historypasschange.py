@@ -1,22 +1,20 @@
-import enum
-import logging
-from flask_restplus import fields
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 from tekoapp.models import db, bcrypt
 
 
-class History_Pass_Change(db.Model):
+class HistoryPassChange(db.Model):
+
     def __init__(self, **kwargs):
         pass_word = ''
         for k, v in kwargs.items():
-            if (k == 'password'):
+            if k == 'password':
                 pass_word = v
-            elif (k == 'is_real_pass'):
+            elif k == 'is_real_pass':
                 print(pass_word)
                 self.set_password(pass_word, v)
-            elif (k != 'password'):
+            elif k != 'password':
                 setattr(self, k, v)
 
     __tablename__ = 'history_pass_changes'
@@ -30,15 +28,16 @@ class History_Pass_Change(db.Model):
         raise AttributeError('password: write-only field')
 
     def set_password(self, password, is_real_pass):
-        if is_real_pass:
-            if is_real_pass == False:
-                self.pass_change_history = bcrypt.generate_password_hash(
-                    password).decode('utf-8')
-            elif is_real_pass == True:
-                self.pass_change_history = password
-        else:
+        if is_real_pass is None:
             self.pass_change_history = bcrypt.generate_password_hash(
                 password).decode('utf-8')
+        else:
+            if is_real_pass:
+                self.pass_change_history = bcrypt.generate_password_hash(
+                    password).decode('utf-8')
+
+            else:
+                self.pass_change_history = password
 
     def check_password(self, password):
         return bcrypt.check_password_hash(self.pass_change_history, password)

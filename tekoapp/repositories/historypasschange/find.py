@@ -1,18 +1,21 @@
 from tekoapp import models as m
 from sqlalchemy import desc
 
-def five_recently(userid):
-    return m.History_Pass_Change.query \
-        .filter(m.History_Pass_Change.user_id == userid) \
-        .order_by(desc(m.History_Pass_Change.created_at)) \
+
+def five_recently(user_id):
+    return m.HistoryPassChange.query \
+        .filter(m.HistoryPassChange.user_id == user_id) \
+        .order_by(desc(m.HistoryPassChange.created_at)) \
         .limit(5)\
         .all()
 
-def by_userid(userid):
-    return m.History_Pass_Change.query \
-        .filter(m.History_Pass_Change.user_id == userid).all()
 
-def first_n_element(userid, n):
-    return m.History_Pass_Change.query \
-        .filter(m.History_Pass_Change.user_id == userid) \
+def by_user_id(user_id):
+    return m.HistoryPassChange.query \
+        .filter(m.HistoryPassChange.user_id == user_id).all()
+
+
+def first_n_element(user_id, n):
+    return m.HistoryPassChange.query \
+        .filter(m.HistoryPassChange.user_id == user_id) \
         .limit(n)

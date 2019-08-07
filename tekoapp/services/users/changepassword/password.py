@@ -8,13 +8,13 @@ def update(newpassword, user):
         userid=user.id,
         newpassword=newpassword
     ):
-        r.historypasschange.add.by_userid_and_password(
-            userid=user.id,
+        r.historypasschange.add.by_user_id_and_password(
+            user_id=user.id,
             password=newpassword,
             is_real_pass= False
         )
         r.historypasschange.delete.more_than_five_data(
-            userid=user.id
+            user_id=user.id
         )
         r.user.edit.password(
             user=user,
