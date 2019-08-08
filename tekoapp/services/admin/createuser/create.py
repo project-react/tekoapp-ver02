@@ -2,6 +2,7 @@ from tekoapp import repositories as r
 from tekoapp import helpers as h
 from tekoapp.extensions import exceptions as e
 
+
 def new_user(
     username='',
     email='',
@@ -22,9 +23,10 @@ def new_user(
         )
         if send_mail:
             return {
-                'message': 'success'
+                'msg': 'success'
             }
     else:
         raise e.NotFoundException(
             message="insert user to database error"
         )
+

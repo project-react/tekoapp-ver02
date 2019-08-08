@@ -20,7 +20,7 @@ class HistoryPassChange(db.Model):
     __tablename__ = 'history_pass_changes'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'))
-    created_at = db.Column(db.TIMESTAMP, default=datetime.now())
+    created_at = db.Column(db.TIMESTAMP, default=datetime.now)
     pass_change_history = db.Column(db.Text(), nullable=False)
 
     @property
@@ -33,11 +33,10 @@ class HistoryPassChange(db.Model):
                 password).decode('utf-8')
         else:
             if is_real_pass:
+                self.pass_change_history = password
+            else:
                 self.pass_change_history = bcrypt.generate_password_hash(
                     password).decode('utf-8')
-
-            else:
-                self.pass_change_history = password
 
     def check_password(self, password):
         return bcrypt.check_password_hash(self.pass_change_history, password)

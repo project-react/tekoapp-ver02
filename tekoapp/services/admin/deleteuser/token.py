@@ -9,9 +9,10 @@ def decode(token):
         data = jwt.decode(token, config.FLASK_APP_SECRET_KEY)
         return data
     except jwt.ExpiredSignature:
-        r.usertoken.delete.by_tokenstring(
-            tokenstring=token
+        r.usertoken.delete.by_token_string(
+            token_string=token
         )
         raise e.UnAuthorizedException('expired token, auto logout')
     except jwt.exceptions.InvalidTokenError:
         raise e.BadRequestException('Invalid Token')
+

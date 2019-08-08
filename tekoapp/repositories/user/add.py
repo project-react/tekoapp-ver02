@@ -1,5 +1,6 @@
 from tekoapp import helpers, models
 
+
 def by_username_email_is_admin(username, email, is_admin):
     password = helpers.random_password()
     user = {
@@ -19,20 +20,23 @@ def by_username_email_is_admin(username, email, is_admin):
         }
     return None
 
-def add(data):
-    User = models.User(**data)
-    models.db.session.add(User)
+
+def by_data(data):
+    user = models.User(**data)
+    models.db.session.add(user)
     models.db.session.commit()
-    return User or None
+    return user or None
+
 
 def by_username_email_password(username="", email="", password=""):
     data = {
-        'username' : username,
-        'email' : email,
-        'password_hash' : password,
+        'username': username,
+        'email': email,
+        'password_hash': password,
         'is_active': 1
     }
     user = models.User(**data)
     models.db.session.add(user)
     models.db.session.commit()
     return user or None
+

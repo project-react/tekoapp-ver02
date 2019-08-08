@@ -2,6 +2,7 @@ import config
 from tekoapp import helpers
 from tekoapp.extensions import exceptions
 
+
 def send(
     token_confirm='',
     email='',
@@ -15,3 +16,4 @@ def send(
         }
     else:
         raise exceptions.HTTPException(message='mail server error')
+

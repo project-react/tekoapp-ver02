@@ -4,15 +4,15 @@ from tekoapp.extensions import exceptions as e
 
 @h.validator_before_handling
 def make_response(
-    tokenstring="",
+    access_token="",
     password="",
-    newpassword="",
+    new_password="",
     **kwargs
 ):
     token_data = token.decode(
-        tokenstring=tokenstring
+        access_token=access_token
     )
-    user_id = token_data["userid"]
+    user_id = token_data["user_id"]
     user = check.exist_account(
         user_id=user_id
     )
@@ -21,8 +21,9 @@ def make_response(
         user=user
     ):
         return pw.update(
-            newpassword=newpassword,
+            new_password=new_password,
             user=user,
         )
     else:
         raise e.UnAuthorizedException(message="Password invalid")
+

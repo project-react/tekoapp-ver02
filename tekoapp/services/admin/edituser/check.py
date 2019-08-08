@@ -12,31 +12,31 @@ def exist_account(user_id):
         raise e.BadRequestException('Account not existed')
 
 
-def change_infomation(
+def change_information(
     user,
     new_username='',
     new_email='',
-    new_isadmin=False,
+    new_is_admin=False,
 ):
     if(
       user.username == new_username
       and
       user.email == new_email
       and
-      user.is_active == new_isadmin
+      user.is_admin == new_is_admin
     ):
         raise e.BadRequestException('Information Unchanged')
     else:
         return True
 
 
-def exist_username_or_email_in_orther_user(
+def exist_username_or_email_in_user(
     user_id,
     new_username='',
     new_email='',
 ):
     list_orther_user = r.user.find.list_orther_user(
-        userid=user_id
+        user_id=user_id
     )
     for user in list_orther_user:
         if(

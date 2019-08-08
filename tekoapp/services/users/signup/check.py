@@ -1,6 +1,7 @@
 from tekoapp import repositories as r
 from tekoapp.extensions import exceptions
 
+
 def no_account(email, username):
     signup_request = r.signup.find.by_email_or_username(email, username)
     user = r.user.find.by_email_or_username(email, username)
@@ -18,3 +19,5 @@ def no_account(email, username):
         )
     else:
         return True
+
+

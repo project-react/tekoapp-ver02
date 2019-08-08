@@ -2,6 +2,7 @@ from flask import Blueprint
 from flask_restplus import Api
 from .users import ns as users_ns
 from .admin import ns as admin_ns
+from .google import ns as google_ns
 
 api_bp = Blueprint('api', __name__, url_prefix='/api')
 
@@ -21,4 +22,5 @@ def init_app(app, **kwargs):
     """
     api.add_namespace(users_ns)
     api.add_namespace(admin_ns)
+    api.add_namespace(google_ns)
     app.register_blueprint(api_bp)

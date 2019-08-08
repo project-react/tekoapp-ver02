@@ -14,12 +14,12 @@ class User(db.Model):
     email = db.Column(db.String(191), nullable=False, unique=True)
     password_hash = db.Column(db.Text(), nullable=False)
     is_active = db.Column(db.Boolean, default=False)
-    last_login = db.Column(db.TIMESTAMP, default = datetime.now())
+    last_login = db.Column(db.TIMESTAMP, default = datetime.now)
     is_admin = db.Column(db.Boolean, default=False)
-    created_at = db.Column(db.TIMESTAMP, default = datetime.now())
-    updated_at = db.Column(db.TIMESTAMP, default = datetime.now())
-    look_time = db.Column(db.Integer, default = 0)
-    look_create_at = db.Column(db.TIMESTAMP, default = datetime.now())
+    created_at = db.Column(db.TIMESTAMP, default=datetime.now)
+    updated_at = db.Column(db.TIMESTAMP, default=datetime.now)
+    look_time = db.Column(db.Integer, default=0)
+    look_create_at = db.Column(db.TIMESTAMP, default=datetime.now)
 
     @property
     def password(self):

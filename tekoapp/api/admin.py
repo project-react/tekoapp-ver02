@@ -2,7 +2,7 @@ from flask_restplus import Namespace, Resource, fields
 from flask import request
 from tekoapp import services
 
-ns = Namespace('admin', description='function for Admin')
+ns = Namespace('admin', description='function for admin')
 
 parser_verify = ns.parser()
 parser_verify.add_argument(
@@ -39,16 +39,16 @@ _create_user_req = ns.model(
     }
 )
 
-_look_account_req = ns.model(
-    'look_account_req',
+_lock_account_req = ns.model(
+    'lock_account_req',
     {
         'user_id': fields.Integer(required=True),
-        'look_time': fields.Integer(required=True)
+        'lock_time': fields.Integer(required=True),
     }
 )
 
 
-@ns.route('/get_list_user/')
+@ns.route('/getListUser/')
 class GetListUser(Resource):
     @ns.expect(parser_verify)
     def get(self):
@@ -58,7 +58,7 @@ class GetListUser(Resource):
         )
 
 
-@ns.route('/is_admin/')
+@ns.route('/isAdmin/')
 class VerifyAdmin(Resource):
     @ns.expect(parser_verify)
     def get(self):
@@ -68,7 +68,7 @@ class VerifyAdmin(Resource):
         )
 
 
-@ns.route('/edit_user/')
+@ns.route('/editUser/')
 class EditUser(Resource):
     @ns.expect(parser_verify, _edit_user_req)
     def put(self):
@@ -78,7 +78,7 @@ class EditUser(Resource):
         return services.admin.edituser.make_response(**data)
 
 
-@ns.route('/delete_user/')
+@ns.route('/deleteUser/')
 class DeleteUser(Resource):
     @ns.expect(parser_verify, _delete_user_req)
     def delete(self):
@@ -87,7 +87,7 @@ class DeleteUser(Resource):
         return services.admin.deleteuser.make_response(token=token, **data)
 
 
-@ns.route('/create_user/')
+@ns.route('/createUser/')
 class CreateUser(Resource):
     @ns.expect(parser_verify, _create_user_req)
     def post(self):
@@ -97,9 +97,9 @@ class CreateUser(Resource):
         return services.admin.createuser.make_response(**data)
 
 
-@ns.route('/look_account/')
+@ns.route('/lookAccount/')
 class LookAccount(Resource):
-    @ns.expect(parser_verify, _look_account_req)
+    @ns.expect(parser_verify, _lock_account_req)
     def put(self):
         token = request.headers.get('Authorization')
         data = request.json or request.args

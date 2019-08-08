@@ -16,8 +16,8 @@ def by_token(func):
             else:
                 raise exceptions.UnAuthorizedException(message='not authorized')
         except jwt.ExpiredSignature:
-            r.usertoken.delete.by_tokenstring(
-                tokenstring=token
+            r.usertoken.delete.by_token_string(
+                token_string=token
             )
             raise exceptions.UnAuthorizedException('expired token, auto logout')
         except jwt.exceptions.InvalidTokenError:

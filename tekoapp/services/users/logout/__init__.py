@@ -1,6 +1,8 @@
 from . import token
 
-def make_response(tokenstring=""):
+
+def make_response(access_token=""):
     return token.decode(
-        tokenstring=tokenstring
+        access_token=access_token
     )
+

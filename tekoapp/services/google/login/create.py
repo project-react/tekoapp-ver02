@@ -10,14 +10,14 @@ def create_official_username(
     new_username = ''
     for c in username:
         if(
-            c >= '0' and c <= '9'
+            (c >= '0') and (c <= '9')
             or
-            c >= 'a' and c <= 'z'
+            (c >= 'a') and (c <= 'z')
         ):
             new_username = new_username + c
         else:
             new_username = new_username + str(ord(c))
-    if (len(new_username)<6):
+    if len(new_username) < 6:
         new_username = new_username + 'tekoapp'
     return new_username
 
@@ -42,15 +42,13 @@ def new_user_by_email(
             'is_admin': False,
             'is_activate': True
         }
-        user = r.user.add(data_user)
+        user = r.user.add.by_data(data_user)
         if user:
             user_token = r.usertoken.add.by_user_model(
                 user=user
             )
-            exp_time_str = datetime.timestamp(user_token.expired_time)
             return {
                 'token': user_token.token,
-                'expired_time': exp_time_str,
                 'username': user.username,
                 'isAdmin': user.is_admin,
             }

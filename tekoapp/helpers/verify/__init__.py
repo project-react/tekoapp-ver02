@@ -1,3 +1,3 @@
-from . import admin, lookaccount
+from . import admin, lockaccount
 
 

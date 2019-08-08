@@ -2,10 +2,9 @@ from tekoapp import repositories as r
 from datetime import datetime, timedelta
 
 
-def by_username_email(username, email):
-    user = r.user.find.by_username_and_email(
-        username=username,
-        email=email,
+def by_user_id(user_id):
+    user = r.user.find.by_id(
+        user_id=user_id,
     )
     if user:
         exp_time = datetime.timestamp(datetime.now() - timedelta(minutes=user.look_time))

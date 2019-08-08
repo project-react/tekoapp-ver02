@@ -2,6 +2,7 @@ from . import check, composemail, token
 from tekoapp import helpers, repositories as r
 from tekoapp.extensions import exceptions
 
+
 @helpers.validator_before_handling
 def make_response(username, email, password, **kwargs):
     if check.no_account(username=username, email=email):
@@ -12,12 +13,13 @@ def make_response(username, email, password, **kwargs):
             **kwargs
         )
         return composemail.send(
-            token_confirm = signup_request.user_token_confirm,
+            token_confirm=signup_request.user_token_confirm,
             email=email,
         )
 
-def verify(token_string):
-    token_data = token.decode(tokenstring=token_string)
+
+def verify(access_token):
+    token_data = token.decode(access_token=access_token)
     username = token_data["username"]
     signup_request = r.signup.find.by_email_or_username(
         email="",

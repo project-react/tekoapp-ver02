@@ -7,7 +7,7 @@ def eraser_id_is_admin(access_token):
     token_data = token.decode(
         token=access_token
     )
-    user_id = token_data['userid']
+    user_id = token_data['user_id']
     user = r.user.find.by_id(
         user_id=user_id
     )

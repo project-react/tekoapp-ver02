@@ -1,6 +1,7 @@
 from tekoapp import helpers as h
 from . import check, create
 
+
 @h.validator_before_handling
 def make_response(username='', email='', is_admin='', **kwargs):
     if (
@@ -19,3 +20,4 @@ def make_response(username='', email='', is_admin='', **kwargs):
             email=email,
             is_admin=is_admin,
         )
+

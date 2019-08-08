@@ -3,22 +3,22 @@ from tekoapp.extensions import exceptions as e
 from . import check
 
 
-def update(newpassword, user):
-    if check.historypassword(
-        userid=user.id,
-        newpassword=newpassword
+def update(new_password, user):
+    if check.history_password(
+        user_id=user.id,
+        new_password=new_password
     ):
         r.historypasschange.add.by_user_id_and_password(
             user_id=user.id,
-            password=newpassword,
-            is_real_pass= False
+            password=new_password,
+            is_real_pass=False
         )
         r.historypasschange.delete.more_than_five_data(
             user_id=user.id
         )
         r.user.edit.password(
             user=user,
-            newpassword=newpassword,
+            new_password=new_password,
         )
         return {
             'message': 'success'

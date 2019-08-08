@@ -10,8 +10,7 @@ class SignupRequest(db.Model):
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)
-            
-        self.expired_time = datetime.now() + timedelta(minutes=30)
+
         self.create_token()
 
     __tablename__ = 'signup_request'
@@ -20,7 +19,6 @@ class SignupRequest(db.Model):
     email = db.Column(db.String(128), nullable=False, unique=True)
     password_hash = db.Column(db.Text(), nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
-    expired_time = db.Column(db.TIMESTAMP, default=(datetime.now() + timedelta(minutes=30)))
     user_token_confirm = db.Column(db.Text(), nullable=False)
 
     @property
@@ -34,8 +32,8 @@ class SignupRequest(db.Model):
 
     def create_token(self):
         token_data = {
-            "username" : self.username,
-            "exp": datetime.timestamp(self.expired_time)
+            "username": self.username,
+            "exp": datetime.timestamp(datetime.now() + timedelta(minutes=30))
         }
         token_string = jwt.encode(token_data, config.FLASK_APP_SECRET_KEY)
         self.user_token_confirm = token_string.decode('UTF-8')

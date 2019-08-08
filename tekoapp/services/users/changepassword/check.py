@@ -1,5 +1,7 @@
 from tekoapp import repositories as r
 from tekoapp.extensions import exceptions as e
+
+
 def exist_account(user_id):
     user = r.user.find.by_id(
         user_id=user_id
@@ -18,11 +20,13 @@ def password(password, user):
     else:
         raise e.UnAuthorizedException(message="Password invalid")
 
-def historypassword(userid, newpassword):
-    list_five_historypassword = r.historypasschange.find.five_recently(
-        user_id=userid
+
+def history_password(user_id, new_password):
+    list_five_history_password = r.historypasschange.find.five_recently(
+        user_id=user_id
     )
-    for historypass in list_five_historypassword:
-        if historypass.check_password(newpassword):
-            return  False
+    for history_pass in list_five_history_password:
+        if history_pass.check_password(new_password):
+            return False
     return True
+
