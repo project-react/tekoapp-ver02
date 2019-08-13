@@ -3,7 +3,7 @@ from tekoapp.repositories import usertoken
 
 
 def by_token_string(token_string):
-    user_token = usertoken.find.by_tokenstring(tokenstring=token_string)
+    user_token = usertoken.find.by_access_token(access_token=token_string)
     if user_token:
         models.db.session.delete(user_token)
         models.db.session.commit()
